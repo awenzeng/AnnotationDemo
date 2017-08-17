@@ -13,6 +13,7 @@ import java.lang.reflect.Type;
  */
 
 public class AnnotionProxy {
+    private static final String TAG = "AnnotionProxy";
     public static  <T> T create(final Class<T> service) {
         return (T) Proxy.newProxyInstance(service.getClassLoader(), new Class<?>[]{service},
                 new InvocationHandler() {
@@ -22,18 +23,16 @@ public class AnnotionProxy {
                             throws Throwable {
                         // Annotation[]  methodAnnotations = method.getAnnotations();//拿到函数注解数组
                         UserMethod userMethod = method.getAnnotation(UserMethod.class);
-                        Log.e("good", "UserMethod---title->" + userMethod.title());
-                        Type[] parameterTypes = method.getGenericParameterTypes();
+                        Log.e(TAG, "UserMethod---title->" + userMethod.title());
                         Annotation[][] parameterAnnotationsArray = method.getParameterAnnotations();//拿到参数注解
                         for (int i = 0; i < parameterAnnotationsArray.length; i++) {
                             Annotation[] annotations = parameterAnnotationsArray[i];
                             if (annotations != null) {
                                 UserParam userParam = (UserParam) annotations[0];
-                                Log.e("good", "UserParam---userParam->" + userParam.name()+ ","+userParam.phone()+ "," + args[i]);
+                                Log.e(TAG, "UserParam---userParam->" + userParam.name()+ ","+userParam.phone()+ "," + args[i]);
                             }
                         }
-                        method.invoke(proxy,args);
-                        return "";
+                        return null;
                     }
                 });
     }

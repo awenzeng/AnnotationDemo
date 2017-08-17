@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             sb.append("}");
-            Log.e("good", sb.toString());
+            Log.e(TAG, sb.toString());
             /************************类的方法end****************/
 
         } catch (Exception e) {

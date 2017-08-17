@@ -37,6 +37,6 @@ public class User {
     }
 
     public void print(@UserParam(name = "刘凤",phone = "110") String temp){
-        Log.e("good", "User: "+id+","+name+","+phone+","+temp);
+        Log.e("User", "User: "+id+","+name+","+phone+","+temp);
     }
 }
