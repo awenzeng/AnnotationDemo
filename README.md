@@ -226,6 +226,33 @@ ii.Java动态代理机制获取
 
     }
 ```
+# 运行结果
+```java
+08-17 10:48:04.955 29736-29736/com.awen.annotationdemo E/AnnotionProxy: UserMethod---title->AwenZeng
+08-17 10:48:04.955 29736-29736/com.awen.annotationdemo E/AnnotionProxy: UserParam---userParam->刘峰,110,我之存在，因为有你。
+08-17 10:48:04.955 29736-29736/com.awen.annotationdemo E/MainActivity: 注解方法：牛B啊！！！
+08-17 10:48:04.955 29736-29736/com.awen.annotationdemo E/MainActivity: 注解参数2：刘凤,110
+08-17 10:48:04.955 29736-29736/com.awen.annotationdemo E/MainActivity: getName的注解方法：牛B啊！！！
+08-17 10:48:04.955 29736-29736/com.awen.annotationdemo E/MainActivity: getPhone的注解方法：中国梦
+08-17 10:48:04.960 29736-29736/com.awen.annotationdemo E/MainActivity: print的注解参数2：刘凤,110
+08-17 10:48:04.960 29736-29736/com.awen.annotationdemo E/MainActivity: setPhone的注解参数2：李小龙,999
+08-17 10:48:04.960 29736-29736/com.awen.annotationdemo E/User: User: 1000000,刘德华,18665859331,中国人民解放军
+08-17 10:48:04.960 29736-29736/com.awen.annotationdemo E/MainActivity: public class User{
+                                                                       	private String name;
+                                                                       	private String phone;
+                                                                       	private int id;
+                                                                       	public static transient volatile IncrementalChange $change;
+                                                                       	public static final long serialVersionUID;
+                                                                       	public int getId();
+                                                                       	public String getName();
+                                                                       	public String getPhone();
+                                                                       	public void print();
+                                                                       	public void setId();
+                                                                       	public void setName();
+                                                                       	public void setPhone();
+                                                                       	public static transient Object access$super();
+                                                                       }
+```
 
 # Lisence
 
