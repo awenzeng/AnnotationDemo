@@ -105,7 +105,7 @@ i.直接获取
                 }
             }
 ```
-ii.反射动态代理获取
+ii.Java动态代理机制获取
 ```java
  public static  <T> T create(final Class<T> service) {
         return (T) Proxy.newProxyInstance(service.getClassLoader(), new Class<?>[]{service},
