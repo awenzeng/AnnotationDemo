@@ -1,5 +1,5 @@
 # AnnotationDemo
-注解与反射
+注解与反射,[Annontation注解的应用及介绍](http://awenzeng.me/2017/08/01/tech_android_annontation/)
 
 # 注解
 
@@ -64,9 +64,10 @@ public class User {
 }
 ```
 3.注解获取
+
 i.直接获取
 ```java
- Class c1 = Class.forName("com.awen.annotationdemo.User");
+            Class c1 = Class.forName("com.awen.annotationdemo.User");
             Method method =  c1.getDeclaredMethod("getName");
             UserMethod userMethod = method.getAnnotation(UserMethod.class);
             if (userMethod != null) {
@@ -116,7 +117,7 @@ ii.反射动态代理获取
                         // Annotation[]  methodAnnotations = method.getAnnotations();//拿到函数注解数组
                         UserMethod userMethod = method.getAnnotation(UserMethod.class);
                         Log.e(TAG, "UserMethod---title->" + userMethod.title());
-                        Annotation[][] parameterAnnotationsArray = method.getParameterAnnotations();//拿到参数注解
+                        Annotation[][] parameterAnnotationsArray =                    method.getParameterAnnotations();//拿到参数注解
                         for (int i = 0; i < parameterAnnotationsArray.length; i++) {
                             Annotation[] annotations = parameterAnnotationsArray[i];
                             if (annotations != null) {
@@ -134,7 +135,7 @@ ii.反射动态代理获取
 
 反射获取类的三种方法
 ```java
- //第一种方式：
+            //第一种方式：
             Class c = Class.forName("com.awen.annotationdemo.User");
 
             //第二种方式：
