@@ -1,5 +1,7 @@
 # AnnotationDemo
-注解与反射,[Annontation注解的应用及介绍](http://awenzeng.me/2017/08/01/tech_android_annontation/)
+注解与反射
+
+[Annontation注解的应用及介绍](http://blog.csdn.net/awenyini/article/details/77478230)
 
 # 注解
 
