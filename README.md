@@ -183,7 +183,8 @@ ii.Java动态代理机制获取
 
             /************************属性变量start****************/
             Field idF = c.getDeclaredField("id");
-            idF.setAccessible(true);
+            //打破封装  
+            idF.setAccessible(true); //使用反射机制可以打破封装性，导致了java对象的属性不安全。
             idF.set(o, 1000000);
 
             Field nameF = c.getDeclaredField("name");
